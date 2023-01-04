@@ -1,0 +1,20 @@
+// Set up the input field and submit button
+const inputField = document.querySelector("#input");
+const submitButton = document.querySelector("#submit");
+
+// Set up the chat window
+const chatWindow = document.querySelector("#chat-window");
+
+// Handle the submit button click event
+submitButton.addEventListener("click", () => {
+  // Get the message from the input field
+  const message = inputField.value;
+
+  // Add the message to the chat window
+  const messageElement = document.createElement("p");
+  messageElement.textContent = message;
+  chatWindow.appendChild(messageElement);
+
+  // Clear the input field
+  inputField.value = "";
+});
